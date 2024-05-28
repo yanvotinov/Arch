@@ -1,0 +1,4 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+Container(DBS03, "DBS03", "BUH, HRM, CNS, DOC, ERP 2.5 (DEV,DEMO,TEST)")
+@enduml

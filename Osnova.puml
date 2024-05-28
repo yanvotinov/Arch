@@ -1,0 +1,45 @@
+@startuml
+
+' Подключаем репозиторий для работы со схемой с4
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+' !include C4_Container.puml
+
+title Основная схема компании "Fast-Soft"
+
+' Подключаем наши компоненты для работы 
+!define servers https://gitlab.com/-/ide/project/test15310820/microarch/edit/main/-/systemdesign/containers/servers/ 
+'!define consumers https://gitlab.com/-/ide/project/test15310820/microarch/edit/main/-/systemdesign/containers/consumers/ 
+'!define systems https://gitlab.com/-/ide/project/test15310820/microarch/edit/main/-/systemdesign/containers/systems/ 
+
+' LAYOUT_AS_SKETCH()
+' LAYOUT_TOP_DOWN()
+LAYOUT_WITH_LEGEND()
+
+!include systems/AIKO.puml
+!include systems/BUH.puml
+!include systems/DOCMANAGER.puml
+!include systems/ERP24.puml
+!include systems/ERP25.puml
+!include systems/HRM.puml
+!include systems/HRMBIT.puml
+!include systems/REDIRECT.puml
+
+Rel(ERP24, AIKO, "Использует")
+Rel(ERP24, BUH, "Использует")
+Rel(ERP24, DOCMANAGER, "Использует")
+Rel(ERP24, ERP25, "Использует")
+Rel(ERP24, HRM, "Использует")
+Rel(ERP24, HRMBIT, "Использует")
+
+' Связи:
+' 1С
+Rel(HRM, REDIRECT, "Обмен", "HTTPS, Web-services")
+Rel_Back(HRM, REDIRECT, "Обмен", "HTTPS")
+Rel(HRMBIT, REDIRECT, "Обмен", "HTTPS, Web-services")
+Rel_Back(HRMBIT, REDIRECT, "Обмен", "HTTPS")
+Rel(BUH, REDIRECT, "Обмен", "HTTPS, Web-services")
+Rel_Back(BUH, REDIRECT, "Обмен", "HTTPS")
+Rel(AIKO, REDIRECT, "Обмен", "HTTPS, Web-services")
+Rel_Back(AIKO, REDIRECT, "Обмен", "HTTPS")
+
+@enduml

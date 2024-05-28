@@ -1,0 +1,20 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+' uncomment the following line and comment the first to use locally
+' !include C4_Container.puml
+' LAYOUT_TOP_DOWN()
+' LAYOUT_AS_SKETCH()
+LAYOUT_WITH_LEGEND()
+
+title Системы используемые в разработке
+
+Container(ERP24, "1С:ERP 2.4", "")
+Container(ERP25, "1С:ERP 2.5", "")
+Container(HRM, "1С:ЗУП 3.1", "Зарплата и управление персоналом.")
+Container(HRMBIT, "1С:ЗУП 3.1 + БИТ", "Зарплата и управление персоналом + БИТ.Учет мигрантов")
+Container(BUH, "1С:БУХ 3.0", "Бухгалтерия предприятия")
+Container(DOCMANAGER, "1С:Документооборот", "")
+Container(REDIRECT, "1С:REDIRECT", "Сервисная база для перенаправления запросов")
+Container(AIKO, "AIKO", "")
+
+@enduml

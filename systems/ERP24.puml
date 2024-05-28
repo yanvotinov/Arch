@@ -1,0 +1,4 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+Container(ERP24, "1С:ERP 2.4", "")
+@enduml

@@ -1,0 +1,17 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+' uncomment the following line and comment the first to use locally
+' !include C4_Container.puml
+' LAYOUT_TOP_DOWN()
+' LAYOUT_AS_SKETCH()
+LAYOUT_WITH_LEGEND()
+
+title Описание пользователей системы
+
+Container(ADMINISTRATOR, "ADMINISTRATOR", "Админский пользователь системы")
+Container(USER, "USER", "Пользователь системы")
+Container(BUHGALTER, "BUHGALTER", "")
+Container(MANAGER, "MANAGER", "")
+Container(PROGRAMMIST, "PROGRAMMIST", "Программист")
+
+@enduml

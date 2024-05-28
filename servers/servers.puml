@@ -1,0 +1,19 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+' uncomment the following line and comment the first to use locally
+' !include C4_Container.puml
+' LAYOUT_TOP_DOWN()
+' LAYOUT_AS_SKETCH()
+LAYOUT_WITH_LEGEND()
+
+title Сервера
+
+Container(DBS01, "DBS01", "CNS (PROD+TEST)")
+Container(DBS03, "DBS03", "BUH, HRM, CNS, DOC, ERP 2.5 (DEV,DEMO,TEST)")
+Container(DBS05, "DBS05", "ПЛАНИРУЕТСЯ УДАЛЕНИЕ")
+Container(DBS06, "DBS06", "BUH, HRM, ERP 2.5 (PROD)")
+Container(ERP01, "ERP01", "ERP 2.4 (PROD+TEST)")
+Container(ERP02, "ERP02", "ERP 2.4 (PROD+TEST) ФК")
+Container(SQL07, "SQL07", "BUH, HRM, ERP 2.5 (PROD)")
+
+@enduml
