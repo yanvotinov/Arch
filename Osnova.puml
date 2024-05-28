@@ -7,7 +7,8 @@
 title Основная схема компании "Fast-Soft"
 
 ' Подключаем наши компоненты для работы 
-!define servers https://gitlab.com/-/ide/project/test15310820/microarch/edit/main/-/systemdesign/containers/servers/ 
+' !define servers https://gitlab.com/-/ide/project/test15310820/microarch/edit/main/-/systemdesign/containers/servers/ 
+!define servers https://github.com/yanvotinov/Arch/tree/5cdeb70c3c8bc396c349b551ea6b5d902af7f7f3/systems
 '!define consumers https://gitlab.com/-/ide/project/test15310820/microarch/edit/main/-/systemdesign/containers/consumers/ 
 '!define systems https://gitlab.com/-/ide/project/test15310820/microarch/edit/main/-/systemdesign/containers/systems/ 
 
